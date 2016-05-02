@@ -15,7 +15,7 @@ var map = L.mapbox.map('map', mapId);
 // Set the initial view of the map to the whole US
 map.setView([39, -96], 4);
 
-var dataFileToAdd = 'data/restaurants.geojson';
+var dataFileToAdd = 'data/parks.geojson';
 
 var featureLayer = L.mapbox.featureLayer();
 	featureLayer.loadURL(dataFileToAdd);
@@ -26,7 +26,7 @@ featureLayer.on('ready', function(){
     	layer.setIcon(L.mapbox.marker.icon({
           "marker-color": "#8834bb", 
           "marker-size": "large",
-          "marker-symbol": "restaurant"
+          "marker-symbol": "marker"
         }))
     })
     map.fitBounds(featureLayer.getBounds());
