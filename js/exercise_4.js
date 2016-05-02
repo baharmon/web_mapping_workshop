@@ -26,7 +26,7 @@ var featureLayer = L.mapbox.featureLayer();
 featureLayer.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#333", 
+          "marker-color": "#333",
           "marker-size": "large",
           "marker-symbol": "marker"
         }))
@@ -36,10 +36,10 @@ featureLayer.on('ready', function(){
 
 var clickHandler = function(e){
 	$('#info').empty();
-  
+
   var feature = e.target.feature;
-  
-  $('#info').fadeIn(400, function((){
+
+  $('#sidebar').fadeIn(400, function((){
   	var info = '';
   	info += '<div>';
   	info += '<h2>'+ feature.properties.name + '<h2>';
@@ -72,4 +72,3 @@ featureLayer.on('ready', function(){
 //  	layer.bindPopup('Welcome to '+ layer.feature.properties.name);
 //  })
 //})
-
