@@ -31,7 +31,7 @@ featureLayer.on('ready', function(){
           "marker-symbol": "marker"
         }))
     })
-    map.fitBounds(featureLayer.getBounds());
+    // map.fitBounds(featureLayer.getBounds());
 })
 
 
