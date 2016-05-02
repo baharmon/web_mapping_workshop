@@ -47,5 +47,6 @@ featureLayerParks.on('ready', function(){
           "marker-symbol": "marker"
         }))
     })
+    map.fitBounds(featureLayerParks.getBounds());
 })
 
