@@ -15,7 +15,9 @@ var map = L.mapbox.map('map', mapId);
 // Set the initial view of the map to the whole US
 map.setView([39, -96], 4);
 
-var dataFileToAdd = 'data/rome_parks.geojson';
+var dataFileToAdd = 'data/restaurants.geojson';
+
+var dataParks = 'data/rome_parks.geojson';
 
 var featureLayer = L.mapbox.featureLayer();
 	featureLayer.loadURL(dataFileToAdd);
