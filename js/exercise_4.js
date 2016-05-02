@@ -65,6 +65,25 @@ map.on('click',function(){
 	$('#sidebar').fadeOut(200);
 });
 
+var myLocation = L.mapbox.featureLayer().addTo(map);
+
+map.on('locationfound', function(e){
+	myLocation,setGeoJSON({
+		type: 'Feature',
+		geometry: {
+			type: 'Point',
+			coordinates: [e.latlng.lng, e.latlng.lat]
+		},
+		properties: {
+			"title": "Here I am!",
+			"marker-color": "#111",
+			"marker-symbol": "marker"
+		}
+	})
+})
+
+map.locate({setView: true})
+
 //featureLayer.on('ready', function(){
 //  this.eachLayer(function(layer){
 //  	layer.bindPopup('Welcome to '+ layer.feature.properties.name);
