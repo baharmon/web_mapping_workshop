@@ -42,7 +42,7 @@ var featureLayerParks = L.mapbox.featureLayer();
 featureLayerParks.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#A9A9A9", 
+          "marker-color": "#333", 
           "marker-size": "large",
           "marker-symbol": "marker"
         }))
