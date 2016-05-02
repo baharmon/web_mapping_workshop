@@ -33,3 +33,19 @@ featureLayer.on('ready', function(){
     })
     map.fitBounds(featureLayer.getBounds());
 })
+
+
+var featureLayerParks = L.mapbox.featureLayer();
+	featureLayerParks.loadURL(dataParks);
+	featureLayerParks.addTo(map);
+
+featureLayerParks.on('ready', function(){
+	this.eachLayer(function(layer){
+    	layer.setIcon(L.mapbox.marker.icon({
+          "marker-color": "#A9A9A9", 
+          "marker-size": "large",
+          "marker-symbol": "marker"
+        }))
+    })
+})
+
