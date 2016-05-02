@@ -61,7 +61,10 @@ featureLayer.on('ready', function(){
   })
 })
 
-
+map.on('click',function(e){
+	$('#sidebar').fadeOut(200);
+    $('#sidebar').empty();
+});
 
 //featureLayer.on('ready', function(){
 //  this.eachLayer(function(layer){
